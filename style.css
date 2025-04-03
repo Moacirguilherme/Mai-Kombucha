@@ -1,50 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+
+}
+
 header {
-    background-color: #f8f8f8; /* Cor de fundo leve */
-    padding: 10px 0;
+    background-color: #B7E4C7;
+    /* Bege claro para um visual clean */
+    padding: 15px 0;
 }
 
 .header-container {
-    max-width: 1200px; /* Limita a largura */
-    margin: 0 auto; /* Centraliza */
+    font-size: 20px;
+    max-width: 1300px;
+    /* Define uma largura máxima */
+    margin: 0 auto;
+    /* Centraliza o header */
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
+    background-color: #E9C46A;
+    border-radius: 10px;
+    /* Borda arredondada para um visual mais suave */
+}
+
+/* Ajustando os links */
+.header-container a {
+    text-decoration: none;
+    color: #3A5A40;
+    /* Verde leve para um visual saudável */
+    margin: 0 15px;
+    /* Espaçamento entre os links */
 }
 
 nav {
     display: flex;
-    gap: 20px; /* Espaço entre os links */
+    gap: 50px; /* Espaçamento igual entre os links */
 }
 
 nav a {
     text-decoration: none;
-    color: #4b6b4b; /* Verde saudável */
-    font-weight: bold;
-    transition: color 0.3s;
+    color: #3A5A40;
 }
 
-nav a:hover {
-    color: #f28e1c; /* Laranja ao passar o mouse */
-}
 
-/* Ajusta a logo */
+/* Ajustando a logo */
 .logo img {
     height: 60px;
+    /* Ajuste o tamanho conforme necessário */
 }
 
+
 /* Ícones sociais */
-.social-icons {
+.social-icons  {
     display: flex;
-    gap: 15px;
+    margin: 0;
+    /* Espaço entre os ícones */
 }
 
 .social-icons a {
-    font-size: 20px;
+    font-size: 35px;
     color: #4b6b4b;
     transition: 0.3s;
 }
 
 .social-icons a:hover {
     color: #f28e1c;
+    /* Um laranja saudável ao passar o mouse */
 }
