@@ -93,6 +93,7 @@ nav a:hover::after {
 /* Ajustando a logo */
 .logo img {
     height: 60px;
+    border-radius: 50%;
     /* Ajuste o tamanho conforme necessário */
 }
 
@@ -139,18 +140,23 @@ nav a:hover::after {
   .carousel-container {
     position: relative;
     overflow: hidden;
+    width: 100%;
+    max-width: 700px; /* ou o mesmo valor usado nas imagens */
+    margin: 0 auto;
   }
   
   .carousel-track {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    width: 100%;
   }
   
   .carousel-track img {
     width: 100%;
-    max-width: 900px;
-    height: auto;
-    border-radius: 10px;
+    max-width: 700px;
+    flex-shrink: 0; /* Impede que a imagem encolha */
+  height: 400px;
+  object-fit: cover;
   }
   
   button.prev,
