@@ -12,8 +12,7 @@ body {
 }
 
 header {
-    background-color: #B7E4C7;
-    /* Bege claro para um visual clean */
+    background: linear-gradient(to top, #B7E4C7, #E9C46A);
     padding: 15px 0;
 }
 
@@ -27,9 +26,9 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: #E9C46A;
+    background: linear-gradient(to top, #B7E4C7, #E9C46A);
     border-radius: 10px;
-    /* Borda arredondada para um visual mais suave */
+    /* Borda arredondada para um visual mais suave  #E9C46A*/
 }
 
 /* Ajustando os links */
@@ -62,8 +61,7 @@ nav a {
 /* Ícones sociais */
 .social-icons  {
     display: flex;
-    margin: 0;
-    /* Espaço entre os ícones */
+       /* Espaço entre os ícones */
 }
 
 .social-icons a {
