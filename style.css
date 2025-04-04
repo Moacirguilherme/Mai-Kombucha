@@ -1,44 +1,45 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-    margin: 0;
-    font-family: "Roboto", sans-serif;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
 
 }
 
 header {
-    background: linear-gradient(to top, #B7E4C7, #E9C46A);
-    padding: 15px 0;
+  background: linear-gradient(to top, #B7E4C7, #E9C46A);
+  padding: 15px 0;
 }
 
 .header-container {
-    font-size: 20px;
-    max-width: 1300px;
-    /* Define uma largura máxima */
-    margin: 0 auto;
-    /* Centraliza o header */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background: linear-gradient(to top, #B7E4C7, #E9C46A);
-    border-radius: 10px;
-    /* Borda arredondada para um visual mais suave */
+  font-size: 20px;
+  max-width: 1300px;
+  /* Define uma largura máxima */
+  margin: 0 auto;
+  /* Centraliza o header */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: linear-gradient(to top, #B7E4C7, #E9C46A);
+  border-radius: 10px;
+  /* Borda arredondada para um visual mais suave */
 }
 
 /* Ajustando os links */
 .header-container a {
-    text-decoration: none;
-    color: #3A5A40;
-    /* Verde leve para um visual saudável */
-    margin: 0 15px;
-    /* Espaçamento entre os links */
+  text-decoration: none;
+  color: #3A5A40;
+  /* Verde leve para um visual saudável */
+  margin: 0 15px;
+  /* Espaçamento entre os links */
 }
+
 /*
 nav {
     display: flex;
@@ -52,30 +53,31 @@ nav a {
 */
 
 nav a {
-    position: relative;
-    text-decoration: none;
-    color: #3A5A40;
-    transition: color 0.3s ease;
-    padding-bottom: 5px; /* só pra dar espaço pro sublinhado animado */
+  position: relative;
+  text-decoration: none;
+  color: #3A5A40;
+  transition: color 0.3s ease;
+  padding-bottom: 5px;
+  /* só pra dar espaço pro sublinhado animado */
 }
 
 nav a::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #3A5A40;
-    transition: width 0.3s ease;
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #3A5A40;
+  transition: width 0.3s ease;
 }
 
 nav a:hover {
-    color: #588157;
+  color: #588157;
 }
 
 nav a:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
 
@@ -92,98 +94,116 @@ nav a:hover::after {
 
 /* Ajustando a logo */
 .logo img {
-    height: 60px;
-    border-radius: 50%;
-    /* Ajuste o tamanho conforme necessário */
+  height: 60px;
+  border-radius: 50%;
+  /* Ajuste o tamanho conforme necessário */
 }
 
 
 /* Ícones sociais */
-.social-icons  {
-    display: flex;
-       /* Espaço entre os ícones */
+.social-icons {
+  display: flex;
+  /* Espaço entre os ícones */
 }
 
 .social-icons a {
-    font-size: 35px;
-    color: #4b6b4b;
-    transition: 0.3s;
+  font-size: 35px;
+  color: #4b6b4b;
+  transition: 0.3s;
 }
 
 .social-icons a:hover {
-    color: #f28e1c;
-    /* Um laranja saudável ao passar o mouse */
+  color: #f28e1c;
+  /* Um laranja saudável ao passar o mouse */
 
 
 
 }
 
 .carousel-section {
-    background: url('./assets/bg.jpg') no-repeat center center/cover;
-    height: 500px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-  
-  .carousel-overlay {
-    background-color: rgba(255, 255, 255, 0.8); /* leve transparência */
-    padding: 20px;
-    border-radius: 15px;
-    max-width: 900px;
-    width: 90%;
-    position: relative;
-  }
-  
-  .carousel-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    max-width: 700px; /* ou o mesmo valor usado nas imagens */
-    margin: 0 auto;
-  }
-  
-  .carousel-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
-  }
-  
-  .carousel-track img {
-    width: 100%;
-    max-width: 700px;
-    flex-shrink: 0; /* Impede que a imagem encolha */
-  height: 400px;
-  object-fit: cover;
-  }
-  
-  button.prev,
-  button.next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #3A5A40;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 1;
-    border-radius: 50%;
-    opacity: 0.7;
-  }
-  
-  button.prev:hover,
-  button.next:hover {
-    opacity: 1;
-  }
-  
-  button.prev {
-    left: -40px;
-  }
-  
-  button.next {
-    right: -40px;
-  }
+  background: url('./assets/bg.jpg') no-repeat center center/cover;
+  background: linear-gradient(180deg, #58A700, #FFD700);
+  height: 830px;
+  clip-path: inset(0 0 35px 0); /* Corta 30px da parte de baixo */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.carousel-overlay {
+  background: linear-gradient(180deg, #58A700, #FFD700);
+  background-color: rgba(255, 255, 255, 0.8);
+  /* leve transparência */
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 900px;
+  width: 90%;
+  position: relative;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 700px;
+  /* ou o mesmo valor usado nas imagens */
+  margin: 0 auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carousel-track img {
+  width: 100%;
+  max-width: 700px;
+  flex-shrink: 0;
+  /* Impede que a imagem encolha */
+  height: 800px;
+  object-fit: contain;
+}
+
+button.prev,
+button.next {
+  width: 70px;  /* Aumenta a área clicável */
+  height: 60px; /* Mantém proporcional */
+  font-size: 32px; /* Deixa a seta maior */
+  padding: 15px; /* Aumenta a área do botão */
+  opacity: 1; /* Deixa mais visível */
+  background-color: #2C4433; /* Um verde mais forte pra destacar */
+  transition: 0.3s; /* Suaviza o efeito ao passar o mouse */
+}
+
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #3A5A40;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+button.prev:hover,
+button.next:hover {
+  opacity: 1;
+}
+
+button.prev {
+  left: -40px;
+}
+
+button.next {
+  right: -40px;
+}
