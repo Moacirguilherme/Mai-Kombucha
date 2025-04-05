@@ -5,10 +5,11 @@
   font-family: "Roboto", sans-serif;
 }
 
-body {
+html, body {
   margin: 0;
   font-family: "Roboto", sans-serif;
-
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 header {
@@ -124,47 +125,38 @@ nav a:hover::after {
   background: url('./assets/bg.jpg') no-repeat center center/cover;
   background: linear-gradient(180deg, #58A700, #FFD700);
   height: 830px;
+  width: 100vw;
+  left: 0;
+  right: 0;
   clip-path: inset(0 0 35px 0); /* Corta 30px da parte de baixo */
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  padding: 0 10px; /* margenzinha esquerda e direita */
+  box-sizing: border-box; /* garante que padding não estoura o tamanho */
+
 }
 
-.carousel-overlay {
-  background: linear-gradient(180deg, #58A700, #FFD700);
-  background-color: rgba(255, 255, 255, 0.8);
-  /* leve transparência */
-  padding: 20px;
-  border-radius: 15px;
-  max-width: 900px;
-  width: 90%;
-  position: relative;
-}
 
 .carousel-container {
   position: relative;
   overflow: hidden;
-  width: 100%;
-  max-width: 700px;
-  /* ou o mesmo valor usado nas imagens */
-  margin: 0 auto;
+  width: 100vw;  /* ocupa toda a tela */
+  max-width: none;  /* remove o limite */
+  margin: 0; /* remove a centralização */
 }
 
 .carousel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
   width: 100%;
+  /* Remova qualquer espaçamento entre as imagens */
+  gap: 0;
 }
 
 .carousel-track img {
-  width: 100%;
-  max-width: 700px;
+  width: 550px; /* ou a largura que você quiser que ocupe */
   flex-shrink: 0;
-  /* Impede que a imagem encolha */
-  height: 800px;
-  object-fit: contain;
+  display: block; /* remove espaços causados por linha inline */
 }
 
 button.prev,
