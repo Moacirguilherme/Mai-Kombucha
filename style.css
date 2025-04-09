@@ -202,18 +202,59 @@ button.next {
 
 
 @media (max-width: 768px) {
+  .carousel-track {
+    transform: translateX(0); /* evita bugs no swipe inicial */
+  }
+
   .carousel-track img {
-    width: 100vw; /* mostra só uma imagem por vez */
-    height: auto; /* pra imagem se ajustar certinho */
+    width: 100vw;
+    height: auto;
+    object-fit: contain;
   }
 
   .carousel-section {
-    height: auto; /* deixa crescer conforme a imagem */
+    height: auto;
     padding: 0;
   }
 
   .carousel-container {
     height: auto;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  nav a {
+    font-size: 16px;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .social-icons img {
+    width: 24px;
+    height: 24px;
   }
 }

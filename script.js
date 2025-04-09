@@ -6,12 +6,19 @@ const nextBtn = document.querySelector('.next');
 let currentIndex = 0;
 const totalImages = images.length;
 
+function getImagesPerSlide() {
+  return window.innerWidth <= 768 ? 1 : 3;
+}
+
 function updateCarousel() {
-  track.style.transform = `translateX(-${currentIndex * (100 / 3)}vw)`; // 👈 Ajustado para 3 imagens por vez
+  const imagesPerSlide = getImagesPerSlide();
+  const slideWidth = 100 / imagesPerSlide;
+  track.style.transform = `translateX(-${currentIndex * slideWidth}vw)`;
 }
 
 nextBtn.addEventListener('click', () => {
-  if (currentIndex < totalImages - 3) {
+  const imagesPerSlide = getImagesPerSlide();
+  if (currentIndex < totalImages - imagesPerSlide) {
     currentIndex++;
     updateCarousel();
   }
@@ -25,10 +32,17 @@ prevBtn.addEventListener('click', () => {
 });
 
 setInterval(() => {
-  if (currentIndex < totalImages - 3) {
+  const imagesPerSlide = getImagesPerSlide();
+  if (currentIndex < totalImages - imagesPerSlide) {
     currentIndex++;
   } else {
     currentIndex = 0;
   }
   updateCarousel();
 }, 3000);
+
+// Atualiza ao redimensionar a tela
+window.addEventListener('resize', updateCarousel);
+
+// Garante a posição inicial correta
+updateCarousel();
