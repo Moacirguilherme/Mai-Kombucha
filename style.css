@@ -133,30 +133,30 @@ nav a:hover::after {
   display: flex;
   padding: 0 10px; /* margenzinha esquerda e direita */
   box-sizing: border-box; /* garante que padding não estoura o tamanho */
-
+  overflow: hidden;
 }
 
-
 .carousel-container {
-  position: relative;
   overflow: hidden;
-  width: 100vw;  /* ocupa toda a tela */
-  max-width: none;  /* remove o limite */
-  margin: 0; /* remove a centralização */
+  position: relative;
+  width: 100vw;
+
+  height: 100%; /* ou defina uma altura exata */
+  display: flex;
+  align-items: center; /* CENTRALIZA VERTICALMENTE */
+  
 }
 
 .carousel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  width: 100%;
-  /* Remova qualquer espaçamento entre as imagens */
-  gap: 0;
 }
 
 .carousel-track img {
-  width: 550px; /* ou a largura que você quiser que ocupe */
+  width: calc(100vw / 3); /* 3 imagens por vez */
   flex-shrink: 0;
-  display: block; /* remove espaços causados por linha inline */
+  display: block;
+  object-fit: contain;
 }
 
 button.prev,
