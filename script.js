@@ -46,3 +46,10 @@ window.addEventListener('resize', updateCarousel);
 
 // Garante a posição inicial correta
 updateCarousel();
+
+const toggle = document.querySelector('.menu-toggle');
+const header = document.querySelector('header');
+
+toggle.addEventListener('click', () => {
+  header.classList.toggle('menu-open');
+});
