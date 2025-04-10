@@ -5,8 +5,9 @@
   font-family: "Roboto", sans-serif;
 }
 
-html, body {
- scroll-behavior: smooth;
+html,
+body {
+  scroll-behavior: smooth;
   margin: 0;
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;
@@ -71,17 +72,6 @@ nav a:hover::after {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 /* Ajustando a logo */
 .logo img {
   height: 60px;
@@ -116,8 +106,10 @@ nav a:hover::after {
   right: 0;
   position: relative;
   display: flex;
-  padding: 0 10px; /* margenzinha esquerda e direita */
-  box-sizing: border-box; /* garante que padding não estoura o tamanho */
+  padding: 0 10px;
+  /* margenzinha esquerda e direita */
+  box-sizing: border-box;
+  /* garante que padding não estoura o tamanho */
   overflow: hidden;
 }
 
@@ -125,10 +117,12 @@ nav a:hover::after {
   overflow: hidden;
   position: relative;
   width: 100vw;
-  height: 830px; /* ou defina uma altura exata */
+  height: 830px;
+  /* ou defina uma altura exata */
   display: flex;
-  align-items: center; /* CENTRALIZA VERTICALMENTE */
-  
+  align-items: center;
+  /* CENTRALIZA VERTICALMENTE */
+
 }
 
 .carousel-track {
@@ -137,7 +131,8 @@ nav a:hover::after {
 }
 
 .carousel-track img {
-  width: calc(100vw / 3); /* 3 imagens por vez */
+  width: calc(100vw / 3);
+  /* 3 imagens por vez */
   flex-shrink: 0;
   display: block;
   object-fit: contain;
@@ -147,13 +142,20 @@ nav a:hover::after {
 
 button.prev,
 button.next {
-  width: 70px;  /* Aumenta a área clicável */
-  height: 60px; /* Mantém proporcional */
-  font-size: 32px; /* Deixa a seta maior */
-  padding: 15px; /* Aumenta a área do botão */
-  opacity: 1; /* Deixa mais visível */
-  background-color: #2C4433; /* Um verde mais forte pra destacar */
-  transition: 0.3s; /* Suaviza o efeito ao passar o mouse */
+  width: 70px;
+  /* Aumenta a área clicável */
+  height: 60px;
+  /* Mantém proporcional */
+  font-size: 32px;
+  /* Deixa a seta maior */
+  padding: 15px;
+  /* Aumenta a área do botão */
+  opacity: 1;
+  /* Deixa mais visível */
+  background-color: #2C4433;
+  /* Um verde mais forte pra destacar */
+  transition: 0.3s;
+  /* Suaviza o efeito ao passar o mouse */
 }
 
 
@@ -212,7 +214,7 @@ button.next {
   width: 100%;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .text-area {
@@ -243,93 +245,105 @@ button.next {
 }
 
 .image-area img {
-  width: 100%;        /* Ocupa toda a largura possível */
+  width: 100%;
+  /* Ocupa toda a largura possível */
   height: 830px;
-  max-width: none;    /* Remove limite de tamanho */
-  max-height: none;   /* Remove limite de altura */
+  max-width: none;
+  /* Remove limite de tamanho */
+  max-height: none;
+  /* Remove limite de altura */
   object-fit: contain;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* HEADER RESPONSIVO */
-@media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-  }
-
-  nav {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  header.menu-open nav {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-    cursor: pointer;
-    font-size: 28px;
-    color: #3A5A40;
-    margin-left: auto;
-  }
-
-  .social-icons {
-    margin-top: 10px;
-    gap: 15px;
-  }
+.sabores {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #E0F7FA, #B2EBF2, #80CBC4, #4DB6AC, #388E3C, #1B5E20);
+  padding: 2rem;
 }
 
-/* Fora do @media */
-.menu-toggle {
-  display: none;
+.titulo {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #f5c518;
+  z-index: 1;
+}
+
+.cards-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  z-index: 1;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid #444;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #f5c518;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #ccc;
+}
+
+/* Bolhas */
+.bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.bubble {
+  position: absolute;
+  bottom: 0;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  animation: float 4s infinite ease-in;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-300px) scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-600px) scale(1.5);
+    opacity: 0;
+  }
 }
