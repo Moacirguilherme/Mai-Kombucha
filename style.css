@@ -255,6 +255,8 @@ button.next {
   object-fit: contain;
 }
 
+/* section sabores */
+
 .sabores {
   position: relative;
   height: 100vh;
@@ -263,10 +265,10 @@ button.next {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to bottom right, #E0F7FA, #B2EBF2, #80CBC4, #4DB6AC, #388E3C, #1B5E20);background: linear-gradient(to bottom right, #B0DEE5, #8ACED8, #68B0A8, #3A998C, #2E7D32, #164D1A);
+  background: linear-gradient(to bottom right, #B0DEE5, #8ACED8, #68B0A8, #3A998C, #2E7D32, #164D1A);
+
   padding: 2rem;
 }
-
 
 .titulo {
   font-family: 'Poppins', sans-serif;
@@ -278,6 +280,7 @@ button.next {
   text-transform: none;
   background: linear-gradient(90deg, #a8d5ba, #f1f7ee);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -330,9 +333,10 @@ button.next {
 
 .sabores-img img {
   width: 950px;
-  max-width: 600px; /* antes era 400px */
+  max-width: 600px;
+  /* antes era 400px */
   border-radius: 1rem;
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .sabores-texto {
@@ -341,20 +345,6 @@ button.next {
   flex-direction: column;
   align-items: flex-start;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Bolhas */
@@ -383,12 +373,81 @@ button.next {
     transform: translateY(0) scale(1);
     opacity: 1;
   }
+
   50% {
     transform: translateY(-300px) scale(1.2);
     opacity: 0.7;
   }
+
   100% {
     transform: translateY(-600px) scale(1.5);
     opacity: 0;
+  }
+}
+
+/* section o que é kombucha */
+
+.kombucha-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.top {
+  align-items: flex-start;
+}
+
+.bottom {
+  align-items: flex-end;
+}
+
+/* Agora só afeta imagens da seção de kombucha */
+.kombucha-section img {
+  width: 400px; /* largura fixa */
+  height: 250px; /* altura fixa */
+  opacity: 0;
+  transform: translateX(100px);
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  border: 2px solid red; /* só pra você ver a borda */
+}
+
+.slide-in-left {
+  animation-name: slideLeft;
+}
+
+.slide-in-right {
+  animation-name: slideRight;
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }

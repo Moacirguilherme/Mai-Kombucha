@@ -40,3 +40,4 @@ setInterval(() => {
   }
   updateCarousel();
 }, 3000);
+
