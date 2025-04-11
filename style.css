@@ -386,15 +386,26 @@ button.next {
 }
 
 /* section o que é kombucha */
-
 .kombucha-section {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
   align-items: center;
   justify-content: center;
+  height: 100vh;
   padding: 2rem;
+  gap: 2rem;
   overflow: hidden;
+  text-align: center;
+  background-color: #fff;
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.kombucha-section.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .image-container {
@@ -403,51 +414,16 @@ button.next {
   justify-content: center;
 }
 
-.top {
-  align-items: flex-start;
-}
-
-.bottom {
-  align-items: flex-end;
-}
-
-/* Agora só afeta imagens da seção de kombucha */
 .kombucha-section img {
-  width: 400px; /* largura fixa */
-  height: 250px; /* altura fixa */
+  width: 400px;
+  height: 250px;
   opacity: 0;
   transform: translateX(100px);
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  border: 2px solid red; /* só pra você ver a borda */
+  transition: all 1.2s ease;
+  border: 2px solid red; /* opcional */
 }
 
-.slide-in-left {
-  animation-name: slideLeft;
-}
-
-.slide-in-right {
-  animation-name: slideRight;
-}
-
-@keyframes slideLeft {
-  from {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideRight {
-  from {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+.kombucha-section.active img {
+  opacity: 1;
+  transform: translateX(0);
 }

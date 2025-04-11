@@ -41,3 +41,17 @@ setInterval(() => {
   updateCarousel();
 }, 3000);
 
+const section = document.querySelector('.kombucha-section');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+      observer.unobserve(entry.target); // opcional, para animar só 1 vez
+    }
+  });
+}, {
+  threshold: 0.2 // quando 20% da section estiver visível
+});
+
+observer.observe(section);
