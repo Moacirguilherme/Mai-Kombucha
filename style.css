@@ -387,6 +387,7 @@ button.next {
 
 /* section o que é kombucha */
 .kombucha-section {
+  position: relative; /* necessário pro position absolute funcionar nas imagens */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -409,21 +410,36 @@ button.next {
 }
 
 .image-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  position: absolute;
+  width: 600px;
+  height: 400px;
+  z-index: 1;
 }
 
-.kombucha-section img {
-  width: 400px;
-  height: 250px;
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   opacity: 0;
   transform: translateX(100px);
-  transition: all 1.2s ease;
+  transition: all 3.2s ease;
   border: 2px solid red; /* opcional */
 }
 
-.kombucha-section.active img {
-  opacity: 1;
+/* animação quando a section está ativa */
+.kombucha-section.active .image-container img {
+  opacity: 15;
   transform: translateX(0);
+}
+
+/* posição topo esquerdo */
+.image-container.top {
+  top: 30px;
+  left: 50px;
+}
+
+/* posição fundo direito */
+.image-container.bottom {
+  bottom: 30px;
+  right: 50px;
 }
