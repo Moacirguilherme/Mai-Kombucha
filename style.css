@@ -10,7 +10,6 @@ body {
   scroll-behavior: smooth;
   margin: 0;
   font-family: "Roboto", sans-serif;
-  overflow-x: hidden;
   max-width: 100vw;
 }
 
@@ -110,12 +109,10 @@ nav a:hover::after {
   /* margenzinha esquerda e direita */
   box-sizing: border-box;
   /* garante que padding não estoura o tamanho */
-  overflow: hidden;
-}
+  }
 
 .carousel-container {
-  overflow: hidden;
-  position: relative;
+    position: relative;
   width: 100vw;
   height: 830px;
   /* ou defina uma altura exata */
@@ -260,8 +257,7 @@ button.next {
 .sabores {
   position: relative;
   height: 100vh;
-  overflow: hidden;
-  display: flex;
+    display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -354,8 +350,7 @@ button.next {
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  z-index: 0;
+    z-index: 0;
 }
 
 .bubble {
@@ -395,8 +390,7 @@ button.next {
   height: 100vh;
   padding: 2rem;
   gap: 2rem;
-  overflow: hidden;
-  text-align: center;
+    text-align: center;
   background-color: #fff;
 
   opacity: 0;
@@ -442,4 +436,5 @@ button.next {
 .image-container.bottom {
   bottom: 30px;
   right: 50px;
+  
 }
