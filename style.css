@@ -21,7 +21,7 @@ header {
 
 .header-container {
   font-size: 20px;
-  max-width: 1300px;
+  max-width: 1350px;
   /* Define uma largura máxima */
   margin: 0 auto;
   /* Centraliza o header */
@@ -74,7 +74,7 @@ nav a:hover::after {
 
 /* Ajustando a logo */
 .logo img {
-  height: 60px;
+  height: 70px;
   border-radius: 50%;
   /* Ajuste o tamanho conforme necessário */
 }
@@ -440,27 +440,76 @@ button.next {
   right: 50px;
   
 }
+/* section kombucha na sua vida*/
+
+
+.kombucha-vida-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 60px 10%;
+  background: linear-gradient(135deg, #ffb347 0%, #ffcc33 50%, #ff8c66 100%);
+  color: #064e3b;
+  flex-wrap: wrap;
+}
+
+.kombucha-vida-content {
+  flex: 1;
+  max-width: 500px;
+}
+
+.kombucha-vida-content h2 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: #064e3b;
+}
+
+.kombucha-vida-content p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #065f46;
+}
+.kombucha-vida-image {
+  display: flex;
+  gap: 60px;
+  padding: 30px 20px;
+  max-width: 100%;
+  overflow: hidden;
+  flex-wrap: wrap; /* importante se tiverem em telas menores */
+}
+
+.kombucha-vida-image img {
+  width: 100%;
+  max-width: 248px;
+  height: 390px;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
 
 
 /*section parceiros*/
 
 .parceiros-section {
-  background: linear-gradient(to bottom right, #FFF8E1, #F5E5B8, #D4C48C, #A38F5E, #6B5D3D, #4A3F2A);
+  background: linear-gradient(45deg, #6b2d2d 0%, #c56c6c 50%, #d4a373 100%);
   padding: 60px 20px;
   text-align: center;
-  color: #fff;
+  color: #064e3b;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .parceiros-container {
   max-width: 800px;
   margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.3); /* leve transparência p/ destaque */
+  background-color: rgba(0, 85, 65, 0.3); /* branco translúcido leve */
   padding: 40px 20px;
   border-radius: 12px;
+  color: #fff;
   }
 
 .parceiros-section h2 {
@@ -494,7 +543,7 @@ button.next {
 }
 
 .btn-parceiro {
-  background-color: #2c3e50;
+  background-color: #0f766e;
   color: #fff;
   padding: 14px 28px;
   border-radius: 6px;
@@ -506,7 +555,7 @@ button.next {
   }
 
 .btn-parceiro:hover {
-  background-color: #1a252f;
+  background-color: #115e59;
   }
 
 .parceiros-img img {
@@ -520,14 +569,16 @@ button.next {
 }
 
 
+/* rodapé */
 .footer {
-  background-color: #2c3e50;
-  color: #fff;
+  background: linear-gradient(to top, #16d8a4, #13ad89);
+  color: #2b0505;
   padding: 2rem 1rem;
   text-align: center;
   font-size: 1rem;
-  margin-top: 4rem;
-}
+  margin-top: 0;
+  }
+
 
 .footer-container p {
   margin: 0.5rem 0;
@@ -538,12 +589,12 @@ button.next {
 }
 
 .footer-social a {
-  color: #fff;
+  color: #0e0101;
   margin: 0 0.5rem;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-social a:hover {
-  color: #f39c12;
+  color: #22c55e; /* verde vivo, tipo folha nova */
 }
