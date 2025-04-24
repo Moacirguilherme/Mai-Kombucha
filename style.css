@@ -288,6 +288,10 @@ button.next {
   justify-content: center;
   max-width: 1200px;
   z-index: 1;
+  height: 100%;
+  max-height: 800px;
+  
+ 
 }
 
 .card {
@@ -554,8 +558,9 @@ button.next {
   display: inline-block;
   }
 
-.btn-parceiro:hover {
+a.btn-parceiro:hover {
   background-color: #115e59;
+  text-decoration: underline !important;;
   }
 
 .parceiros-img img {
