@@ -11,7 +11,7 @@ html, body {
   font-family: "Montserrat", sans-serif;
   max-width: 100vw;
   overflow-x: hidden;
-}
+  }
 
 /* CABEÇALHO */
 
@@ -99,47 +99,48 @@ nav a:hover::after {
   /* Um laranja saudável ao passar o mouse */
 }
 
+/* CARROSSEL DE IMAGENS */
+
 .carousel-section {
-  /*background: url('./assets/bg.jpg') no-repeat center center/cover;
-  background: linear-gradient(180deg, #58A700, #FFD700);*/
+  /*background: linear-gradient(180deg, #58A700, #FFD700);*/
   background-color: white;
+  width: 100%;
+  overflow: hidden; /* Esconde tudo que ultrapassar */
   height: 100%;
-  width: 100vw;
-  left: 0;
-  right: 0;
   position: relative;
   display: flex;
-  padding: 0 10px;
-  /* margenzinha esquerda e direita */
   box-sizing: border-box;
   /* garante que padding não estoura o tamanho */
   }
 
 .carousel-container {
   position: relative;
-  width: 99%;
+  width: 100%;
+  
   height: 800px; /* ou defina uma altura exata */
   display: flex;
-  align-items: center;
-  /* CENTRALIZA VERTICALMENTE */
-
+  margin: 0 auto
+  
 }
 
 .carousel-track {
-  height: 100%;
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  width: 100%; /* ocupa 100% do container */
+  height: 100%;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.8s ease-in-out;
+  
 }
 
 .carousel-track img {
-  width: calc(100vw / 3);
-  /* 3 imagens por vez */
-  flex-shrink: 0;
-  display: block;
-  object-fit: contain;
+  width: calc((100vw - 6px) / 3); /* compensa a scrollbar */
   height: 100%;
   /*height: 850px;*/
-}
+  flex-shrink: 0;
+  
+  }
 
 button.prev,
 button.next {
@@ -182,11 +183,11 @@ button.next:hover {
 }
 
 button.prev {
-  left: -40px;
+  left: -25px;
 }
 
 button.next {
-  right: -40px;
+  right: -25px;
 }
 
 
