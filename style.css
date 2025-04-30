@@ -23,26 +23,28 @@ header {
 .header-container {
   height: 85px;
   font-size: 20px;
-  max-width: 1350px;
-  /* Define uma largura máxima */
-  margin: 0 auto;
-  /* Centraliza o header */
+  max-width: 1350px;  /* Define uma largura máxima */
+  margin: 0 auto;  /* Centraliza o header */
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
   background: linear-gradient(to top, #B7E4C7, #E9C46A);
-  border-radius: 10px;
-  /* Borda arredondada para um visual mais suave */
+  border-radius: 10px;  /* Borda arredondada */
 }
 
 /* Ajustando os links */
+
 .header-container a {
   text-decoration: none;
   color: #3A5A40;
-  /* Verde leve para um visual saudável */
   margin: 0 15px;
-  /* Espaçamento entre os links */
+  }
+
+nav {
+  display: flex;
+  justify-content: center;  /* Alinha verticalmente */
+
 }
 
 nav a {
@@ -85,8 +87,10 @@ nav a:hover::after {
 /* Ícones sociais */
 .social-icons {
   display: flex;
-  /* Espaço entre os ícones */
+  align-items: center; /* alinhamento vertical */
+  gap: 0px;            /* Espaço entre os ícones */
 }
+
 
 .social-icons a {
   font-size: 35px;
@@ -98,6 +102,7 @@ nav a:hover::after {
   color: #f28e1c;
   /* Um laranja saudável ao passar o mouse */
 }
+
 
 /* CARROSSEL DE IMAGENS */
 
