@@ -285,7 +285,7 @@ h2 {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
+/*
 .cards-container {
   display: flex;
   gap: 2rem;
@@ -296,6 +296,9 @@ h2 {
   height: auto;
   z-index: 1;
   }
+*/
+
+
 
 .card {
   background-color: rgba(255, 255, 255, 0.05);
@@ -313,41 +316,89 @@ h2 {
 }
 
 .card h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
   color: #f5c518;
 }
 
 .card p {
-  font-size: 1rem;
-  line-height: 1.4;
+  font-size: 1.1rem;
+  line-height: 1.6;
   color: #ccc;
+}
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 2.5rem; /* só o espaço vertical */
+  column-gap: 0rem; /* só o espaço horizontal */
+  width: 100%;
+  z-index: 1;
+  margin-left: auto;
+  margin-top: 50px;
 }
 
 .sabores-conteudo {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 3rem;
   width: 100%;
-  max-width: 1200px;
+  align-items: flex-start;
+}
+
+.sabores-texto {
+  flex: 1;
+  padding-left: 20px;        /* Dá um pequeno espaçamento à esquerda do texto */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sabores-img {
+  flex: 0 0 auto;           /* Garante que a div de imagem não se expanda, fique no tamanho exato da imagem */
+  margin: 0;                 /* Remove qualquer margem da div */
+  padding: 0;                /* Remove qualquer preenchimento */
+  position: relative;
+  z-index: 0;
 }
 
 .sabores-img img {
+  width: 100%;               /* Faz a imagem preencher toda a largura disponível */
+  max-width: 650px;          /* Limita o tamanho máximo da imagem */
+  height: auto;              /* Mantém a proporção da imagem */
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  object-fit: contain; 
+  margin-top: 25px;
+  margin-left: 50px;
+  position: relative;
+  z-index: 0;
+ }
+
+/*
+.sabores-img img {
   width: 950px;
   max-width: 600px;
-  /* antes era 400px */
   border-radius: 1rem;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}
+}*/
 
 .sabores-texto {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-}
+  align-items: center;
+  text-align: center;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  margin: 0 auto;
+  font-weight: 500;
+  }
 
+.titulo {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #e0f2f1;
+  letter-spacing: 1px;
+}
 
 /* Bolhas */
 .bubbles {
@@ -356,7 +407,7 @@ h2 {
   left: 0;
   width: 100%;
   height: 100%;
-    z-index: 0;
+    z-index: 1;
 }
 
 .bubble {
