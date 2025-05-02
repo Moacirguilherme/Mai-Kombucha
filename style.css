@@ -285,20 +285,6 @@ h2 {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/*
-.cards-container {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: right;
-  max-width: 1900px;
-  width: 100%;
-  height: auto;
-  z-index: 1;
-  }
-*/
-
-
 
 .card {
   background-color: rgba(255, 255, 255, 0.05);
@@ -334,7 +320,7 @@ h2 {
   width: 100%;
   z-index: 1;
   margin-left: auto;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .sabores-conteudo {
@@ -345,7 +331,6 @@ h2 {
 
 .sabores-texto {
   flex: 1;
-  padding-left: 20px;        /* Dá um pequeno espaçamento à esquerda do texto */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -366,19 +351,11 @@ h2 {
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   object-fit: contain; 
-  margin-top: 25px;
+  margin-top: 5px;
   margin-left: 50px;
   position: relative;
   z-index: 0;
  }
-
-/*
-.sabores-img img {
-  width: 950px;
-  max-width: 600px;
-  border-radius: 1rem;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}*/
 
 .sabores-texto {
   flex: 1;
@@ -419,6 +396,8 @@ h2 {
   border-radius: 50%;
   animation: float 4s infinite ease-in;
 }
+
+/* efeito bolhas kambucha*/
 
 @keyframes float {
   0% {
