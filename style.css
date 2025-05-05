@@ -416,9 +416,120 @@ h2 {
   }
 }
 
-/* section o que é kombucha */
+/* section o que é kombucha*/
+/* Seção: Você sabe o que é Kombucha? */
+/* Seção reaproveitando estilo base */
 .kombucha-section {
-  position: relative; /* necessário pro position absolute funcionar nas imagens */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(to bottom, #D4E6B5, #F5E5B8, #F9D976);
+  gap: 2rem;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+  overflow: hidden;
+}
+
+.kombucha-section.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Texto */
+.kombucha-section .text-container {
+  width: 700px;
+  max-width: 800px;
+  font-size: 1.3rem;
+  z-index: 2;
+}
+
+.kombucha-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #365314;
+}
+
+.kombucha-section p {
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Botão CTA */
+.kombucha-section .cta-button {
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+  background-color: #7FAF4B;
+  color: #fff;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.kombucha-section .cta-button:hover {
+  background-color: #5D7A3E;
+  transform: scale(1.05);
+}
+
+/* Imagens */
+.image-container {
+  position: absolute;
+  width: 250px;
+  height: auto;
+  z-index: 1;
+}
+
+.image-container img {
+  width: 590px;
+  height: auto;
+  object-fit: cover;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 2s ease;
+}
+
+.kombucha-section.active .image-container img {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Posições */
+.image-container.top {
+  top: 40px;
+  left: 30px;
+}
+
+.image-container.bottom {
+  bottom: 40px;
+  right: 350px;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+/*
+.kombucha-section {
+  position: relative; /* necessário pro position absolute funcionar nas imagens 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -454,27 +565,29 @@ h2 {
   opacity: 0;
   transform: translateX(100px);
   transition: all 3.2s ease;
-  border: 2px solid red; /* opcional */
+  border: 2px solid red; /* opcional 
 }
 
-/* animação quando a section está ativa */
+/* animação quando a section está ativa 
 .kombucha-section.active .image-container img {
-  opacity: 15;
+  opacity: 1;
   transform: translateX(0);
 }
 
-/* posição topo esquerdo */
+/* posição topo esquerdo 
 .image-container.top {
   top: 30px;
   left: 50px;
 }
 
-/* posição fundo direito */
+/* posição fundo direito 
 .image-container.bottom {
   bottom: 30px;
   right: 50px;
   
 }
+
+
 /* section kombucha na sua vida*/
 
 
