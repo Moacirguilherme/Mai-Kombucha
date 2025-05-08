@@ -293,7 +293,7 @@ h2 {
   border-radius: 1rem;
   width: 250px;
   text-align: center;
-  transition: transform 0.3s, background-color 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
@@ -522,73 +522,6 @@ h2 {
 
 
 
-
-
-
-
-
-
-/*
-.kombucha-section {
-  position: relative; /* necessário pro position absolute funcionar nas imagens 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  padding: 2rem;
-  gap: 2rem;
-  text-align: center;
-  background: linear-gradient(to bottom, #D4E6B5, #A7C48C, #F5E5B8, #A38F5E);
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 1s ease;
-  }
-.text-container {
-  font-size: 25px;
-}
-.kombucha-section.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.image-container {
-  position: absolute;
-  width: 600px;
-  height: 400px;
-  z-index: 1;
-}
-
-.image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transform: translateX(100px);
-  transition: all 3.2s ease;
-  border: 2px solid red; /* opcional 
-}
-
-/* animação quando a section está ativa 
-.kombucha-section.active .image-container img {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* posição topo esquerdo 
-.image-container.top {
-  top: 30px;
-  left: 50px;
-}
-
-/* posição fundo direito 
-.image-container.bottom {
-  bottom: 30px;
-  right: 50px;
-  
-}
-
-
 /* section kombucha na sua vida*/
 
 
@@ -601,6 +534,7 @@ h2 {
   background: linear-gradient(135deg, #ffb347 0%, #ffcc33 50%, #ff8c66 100%);
   color: #064e3b;
   flex-wrap: wrap;
+  
 }
 
 .kombucha-vida-content {
@@ -628,6 +562,7 @@ h2 {
   max-width: 100%;
   overflow: hidden;
   flex-wrap: wrap; /* importante se tiverem em telas menores */
+    
 }
 
 .kombucha-vida-image img {
@@ -637,7 +572,16 @@ h2 {
   object-fit: cover;
   border-radius: 1rem;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.kombucha-vida-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+
 
 
 /*section parceiros*/
